@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include "../zen.h"
+
+int main() {
+
+	#define FIRST_VALUE	ZEN_COUNTER_NEW()
+	printf("%u\n", ZEN_COUNTER_AS_NUMBER(FIRST_VALUE));	// "0"
+
+	#define SECOND_VALUE	ZEN_COUNTER_NEXT(FIRST_VALUE)
+	printf("%u\n", ZEN_COUNTER_AS_NUMBER(SECOND_VALUE));	// "1"
+
+	#define THIRD_VALUE	ZEN_COUNTER_NEXT(SECOND_VALUE)
+	printf("%u\n", ZEN_COUNTER_AS_NUMBER(THIRD_VALUE));	// "2"
+
+	#define OTHER_COUNTER	ZEN_COUNTER_PARSE_HEX(0, 0, 0, 4, F, 3, B, 6)
+	printf("%u\n", ZEN_COUNTER_AS_NUMBER(OTHER_COUNTER));	// "324534"
+
+	#define FIFTH_VALUE	ZEN_COUNTER_NEXT(OTHER_COUNTER)
+	printf("%u\n", ZEN_COUNTER_AS_NUMBER(FIFTH_VALUE));	// "324535"
+
+	#define SIXTH_VALUE	ZEN_COUNTER_NEXT(THIRD_VALUE)
+	printf("%u\n", ZEN_COUNTER_AS_NUMBER(SIXTH_VALUE));	// "3"
+
+	return 0;
+
+}

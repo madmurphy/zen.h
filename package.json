@@ -1,0 +1,28 @@
+{
+	"name": "zen.h",
+	"version": "1.0.0",
+	"description": "C preprocessor utilities",
+	"homepage": "https://madmurphy.github.io/zen.h/",
+	"author": "madmurphy333@gmail.com",
+	"license": "GPL-3.0",
+	"main": "zen.h",
+	"repo": "madmurphy/zen.h",
+	"src": [
+		"zen.h"
+	],
+	"bugs": {
+		"url": "https://github.com/madmurphy/zen.h/issues",
+		"email" : "madmurphy333@gmail.com"
+	},
+	"keywords": [
+		"c",
+		"c-preprocessor",
+		"counter",
+		"c-preprocessor-counter",
+		"macro",
+		"macros",
+		"c-macro",
+		"c-macros"
+	]
+}
+
